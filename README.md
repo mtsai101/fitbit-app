@@ -23,7 +23,7 @@ to install all the required packages. For more detail information, find [Fitbit 
 ## Build & Run
 ### Clone the project
 ```
-git clone 
+git clone https://github.com/mtsai101/fitbit-app.git
 ```
 
 ### Build
