@@ -17,7 +17,7 @@ If you are using this existing project, just use:
 ```
 npm install
 ```
-to install all required packages.
+to install all required packages. For more detail information, find [Fitbit Command Line Interface Guide](https://dev.fitbit.com/build/guides/command-line-interface/)
 
   
 ## Build & Run
