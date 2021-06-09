@@ -17,12 +17,14 @@ If you are using this existing project, just use:
 ```
 npm install
 ```
-to install all required packages. For more detail information, find [Fitbit Command Line Interface Guide](https://dev.fitbit.com/build/guides/command-line-interface/)
+to install all the required packages. For more detail information, find [Fitbit Command Line Interface Guide](https://dev.fitbit.com/build/guides/command-line-interface/)
 
   
 ## Build & Run
 ### Clone the project
+```
 git clone 
+```
 
 ### Build
 Whenever you write something and want to deploy it on watch, you need to build it first:
@@ -64,16 +66,19 @@ Now the app will be lauched automatically and our app shows in the sideloaded ap
 
 ### How to use:
 Because our app is based on the setting project from Fitbit sample project, we access our app through fitbit official app:
+
 1. Install [fitbit-server](https://github.com/mtsai101/fitbit-server) and launch API server. (Note that the phone, watch, server shold under the same subnet)
 2. On Watch: Launch app
 3. On Phone: "Developer Menu" > Select our app > Settings:Included > Start Record
 4. On Watch: Turn off the toggle to stop record
 
+The sensor data is sent to the API server
+
 
 ### Trouble Shooting
 
 #### 1. Fail to sync:
-Close the fitbit app and relaunch
+Close the fitbit official app and relaunch
 
 #### 2. Watch cannot connect to wifi
 a. Make sure you have sync the watch and phone before the connection.
