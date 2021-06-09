@@ -1,0 +1,34 @@
+{
+  "fitbit": {
+    "appUUID": "33973838-f1b6-483e-a64e-a4905b484326",
+    "appType": "app",
+    "appDisplayName": "file-transfer-settings",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#607d8b",
+    "requestedPermissions": [
+      "access_heart_rate",
+      "access_activity",
+      "access_internet"
+    ],
+    "buildTargets": [
+      "atlas",
+      "vulcan"
+    ],
+    "i18n": {
+      "en": {
+        "name": "file-transfer-settings"
+      }
+    }
+  },
+  "dependencies": {
+    "@fitbit/sdk": "^5.0.2",
+    "@fitbit/sdk-cli": "^1.7.3",
+    "http": "0.0.1-security",
+    "timesync": "^1.0.8"
+  },
+  "scripts": {
+    "build": "fitbit-build"
+  },
+  "appClusterID": "myfitbit",
+  "developerID": "minin"
+}
