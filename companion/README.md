@@ -40,5 +40,5 @@ messaging.peerSocket.onmessage = evt => {
 }
 ```
 
-After the storing on API server complete, our companion would send "idle" message to the app (watch).
+After the storing on API server completes, our companion would send "idle" message to the app (watch).
 
