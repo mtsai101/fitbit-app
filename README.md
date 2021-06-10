@@ -66,13 +66,14 @@ Now the app will be lauched automatically and our app shows in the sideloaded ap
 
 ### How to use:
 Because our app is based on the setting project from Fitbit sample project, we access our app through fitbit official app:
+(Note that wifi connection is optional here, only reinstallation needs to set wifi.)
 
 1. Install [fitbit-server](https://github.com/mtsai101/fitbit-server) and launch API server. (Note that the phone, watch, server shold under the same subnet)
 2. On Watch: Launch app
 3. On Phone: "Developer Menu" > Select our app > Settings:Included > Start Record
 4. On Watch: Turn off the toggle to stop record
 
-The sensor data is sent to the API server
+The sensor data is sent to the API server. 
 
 
 ### Trouble Shooting
@@ -82,9 +83,35 @@ Close the fitbit official app and relaunch
 
 #### 2. Watch cannot connect to wifi
 a. Make sure you have sync the watch and phone before the connection.
+
 b. If you use Mac and iPhone personal hotspot, do not connect the laptop (API server) to hotspot before the watch connect to wifi
+
 c. The wifi you connect need Internet anyway, the device will also sync with the cloud
 
 #### 3. Unable to turn on "Developer bridge" in watch or install app
 The wifi need Internet 
 
+
+### App structure
+A fitbit app typically contains the following folder:
+```
+/app
+/common
+/companion
+/resource
+/settings
+```
+
+**/app:** application logics that executes on watch. Applying [Device API](https://dev.fitbit.com/build/reference/device-api/) is capable of interacting with the presentation layer, communicating with *companion* (phone), and writing the setting. A file *index.js* must be in this folder.
+
+**/companion: (optional):** companion logics the executes on phone. Applying [Companion API](https://dev.fitbit.com/build/reference/companion-api/) is capable of making direct requests to the internet, and communicating with the application. If a file *index.js* in the folder, the companion would be built.
+
+**/common (optional):** Files within this folder can be shared between the application and companion to minimize duplication.
+
+**/resource:** 
+  - **/resource/index.view:** appearance of app on watch. SVG file
+  - **/resource/XXX.css:** control the style of <link> in index.view
+  - **/resource/icon.png:** app icon
+  - **/resource/widget.defs:** control which system widget to use. SVG file
+
+**/settings (optional):** ReactJSX file. User configurable (e.g., button, toggle, text) widgets. Code within this file access to the  [Settings API](https://dev.fitbit.com/build/reference/settings-api/).
