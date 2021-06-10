@@ -106,12 +106,6 @@ if (OrientationSensor) {
   orientationData.style.display = "none";
 }
 
-
-// Message is received
-messaging.peerSocket.onmessage = evt => {
-  setSensor(evt);
-};
-
 function setSensor(evt){
   console.log("setSensor!!");
   if (evt.data.key === "record"){
@@ -143,7 +137,6 @@ function sendVal(data) {
 function startRecord(){
   recording = true;
   SampleInstance = setInterval(function () {
-    console.log(GyroData);
     sendVal(
       {key:'data', value:JSON.stringify({
       timestamp: new Date().getTime(),
@@ -162,6 +155,11 @@ function stopRecord(){
 // Message socket opens
 messaging.peerSocket.onopen = () => {
   console.log("App Socket Open");
+};
+
+// Message is received
+messaging.peerSocket.onmessage = evt => {
+  setSensor(evt);
 };
 
 // Message socket closes
