@@ -1,6 +1,6 @@
 # companion/index.js
 
-### Controling by settings
+### Controll by settings
 In our companion, we use the [Settings API](https://dev.fitbit.com/build/reference/companion-api/settings/) to control on/off of our data collection.
 At the beginning, we initialize *messaging.peerSocket* and make it keep listening, which is responsible for communicating with Fitbit app. 
 The url is the private address and port of the API server. You can change it according to you network configuration.
