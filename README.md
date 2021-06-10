@@ -99,7 +99,7 @@ A fitbit app typically contains the following folder:
 /settings
 ```
 
-**/app:** application logics that executes on watch. Applying [Device API](https://dev.fitbit.com/build/reference/device-api/) is capable of interacting with the presentation layer, communicating with *companion* (phone), and writing the setting. A file *index.js* must be in the folder
+**/app:** application logics that executes on watch. Applying [Device API](https://dev.fitbit.com/build/reference/device-api/) is capable of interacting with the presentation layer, communicating with *companion* (phone), and writing the setting. A file *index.js* must be in this folder.
 
 **/companion: (optional):** companion logics the executes on phone. Applying [Companion API](https://dev.fitbit.com/build/reference/companion-api/) is capable of making direct requests to the internet, and communicating with the application. If a file *index.js* in the folder, the companion would be built.
 
@@ -107,8 +107,8 @@ A fitbit app typically contains the following folder:
 
 **/resource:** 
   - **/resource/index.view:** appearance of app on watch. SVG file
-  - **/resource/XX.css:** control the style of <link> in index.view
+  - **/resource/XXX.css:** control the style of <link> in index.view
   - **/resource/icon.png:** app icon
   - **/resource/widget.defs:** control which system widget to use. SVG file
 
-**/settings (optional):** ReactJSX file. User configurable (e.g., button, toggle, text) widgets. Applying with [Settings API](https://dev.fitbit.com/build/reference/settings-api/)
+**/settings (optional):** ReactJSX file. User configurable (e.g., button, toggle, text) widgets. Code within this file access to the  [Settings API](https://dev.fitbit.com/build/reference/settings-api/).
