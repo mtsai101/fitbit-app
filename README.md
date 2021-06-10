@@ -66,13 +66,14 @@ Now the app will be lauched automatically and our app shows in the sideloaded ap
 
 ### How to use:
 Because our app is based on the setting project from Fitbit sample project, we access our app through fitbit official app:
+(Note that wifi connection is optional here, only reinstallation needs to set wifi.)
 
 1. Install [fitbit-server](https://github.com/mtsai101/fitbit-server) and launch API server. (Note that the phone, watch, server shold under the same subnet)
 2. On Watch: Launch app
 3. On Phone: "Developer Menu" > Select our app > Settings:Included > Start Record
 4. On Watch: Turn off the toggle to stop record
 
-The sensor data is sent to the API server
+The sensor data is sent to the API server. 
 
 
 ### Trouble Shooting
@@ -82,7 +83,9 @@ Close the fitbit official app and relaunch
 
 #### 2. Watch cannot connect to wifi
 a. Make sure you have sync the watch and phone before the connection.
+
 b. If you use Mac and iPhone personal hotspot, do not connect the laptop (API server) to hotspot before the watch connect to wifi
+
 c. The wifi you connect need Internet anyway, the device will also sync with the cloud
 
 #### 3. Unable to turn on "Developer bridge" in watch or install app
