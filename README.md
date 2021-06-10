@@ -88,3 +88,27 @@ c. The wifi you connect need Internet anyway, the device will also sync with the
 #### 3. Unable to turn on "Developer bridge" in watch or install app
 The wifi need Internet 
 
+
+### App structure
+A fitbit app typically contains the following folder:
+```
+/app
+/common
+/companion
+/resource
+/settings
+```
+
+**/app:** application logics that executes on watch. Applying [Device API](https://dev.fitbit.com/build/reference/device-api/) is capable of interacting with the presentation layer, communicating with *companion* (phone), and writing the setting. A file *index.js* must be in the folder
+
+**/companion: (optional):** companion logics the executes on phone. Applying [Companion API](https://dev.fitbit.com/build/reference/companion-api/) is capable of making direct requests to the internet, and communicating with the application. If a file *index.js* in the folder, the companion would be built.
+
+**/common (optional):** Files within this folder can be shared between the application and companion to minimize duplication.
+
+**/resource:** 
+  - **/resource/index.view:** appearance of app on watch. SVG file
+  - **/resource/XX.css:** control the style of <link> in index.view
+  - **/resource/icon.png:** app icon
+  - **/resource/widget.defs:** control which system widget to use. SVG file
+
+**/settings (optional):** ReactJSX file. User configurable (e.g., button, toggle, text) widgets. Applying with [Settings API](https://dev.fitbit.com/build/reference/settings-api/)
