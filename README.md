@@ -4,7 +4,7 @@ This is the app for collection sensor by Fitbit smartwatch
 
 ## Requirements
 1. Node.js 8+ on macOS, Linux, or Windows
-2. Ensure your smartphone sync up with the smartwatch. (Fitbit Account Registration is needed, follow the guidance of your phone app)
+2. Ensure your smartphone sync up with the smartwatch. (Fitbit account registration is needed, follow the guidance on your phone app)
 ## Installation
 ### Command Line Interface
 
